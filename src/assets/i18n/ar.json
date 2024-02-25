@@ -1,0 +1,19 @@
+{
+    "Login":{
+        "username":"اسم المستخدم",
+        "password":"كلمه المرور",
+        "language":"اللغه",
+        "english":"الانجليزية",
+        "arabic":"العربية",
+        "usernameplaceholder":"ادخل اسم المستخدم",
+        "Passwordplaceholder":"ادخل كلمة المرور"
+    },
+    "NewCountry":{
+        "code":"الرمز",
+        "name":"الاسم",
+        "sucessMessage":"تم الحفظ بنجاح"
+    },
+    "action":{
+        "login":"تسجيل الدخول"
+    }
+}

@@ -1,0 +1,42 @@
+<form [formGroup]="UserForm">
+    <div class="mb-3">
+        <label class="form-label">Name</label>
+        <input type="text" class="form-control" formControlName="txtName" placeholder="user name">
+        <span *ngIf="UserForm.controls['txtName'].touched && UserForm.hasError('required','txtName')">Please fill out the user name</span>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input type="text" class="form-control" formControlName="txtEmail" placeholder="user email address">
+        <span *ngIf="UserForm.controls['txtEmail'].touched && UserForm.hasError('required','txtEmail')">Please fill out the user name</span>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Gender</label>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" formControlName="rbGender" value="Male">
+            <label class="form-check-label">Male</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" formControlName="rbGender" value="female">
+            <label class="form-check-label">Female</label>
+        </div>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Password</label>
+        <input type="password" class="form-control" formControlName="txtPassword" placeholder="password">
+        <span *ngIf="UserForm.controls['txtPassword'].touched && UserForm.hasError('required','txtPassword')">Please fill out the password</span>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Confirm Password</label>
+        <input type="password" class="form-control" formControlName="txtConfirmPassword" placeholder="password">
+        <span *ngIf="UserForm.controls['txtConfirmPassword'].touched && UserForm.hasError('required','txtConfirmPassword')">Please fill out the confirm password</span>
+    </div>
+    <div class="mb-3">
+        <input type="button" value="Create Account"  class="btn btn-primary" (click)="createAccount()">
+        
+    </div>    
+    
+    </form>

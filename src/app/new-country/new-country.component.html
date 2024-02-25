@@ -1,0 +1,19 @@
+<form [formGroup]="countryForm">
+<div class="mb-3">
+    <label class="form-label">{{'NewCountry.code' |translate}}</label>
+    <input type="text" class="form-control" formControlName="txtCode" placeholder="Country Code">
+    <span *ngIf="countryForm.controls['txtCode'].touched && countryForm.hasError('required','txtCode')">Please fill out the Country Code</span>
+</div>
+
+<div class="mb-3">
+    <label class="form-label">{{'NewCountry.name' |translate}}</label>
+    <input type="text" class="form-control" formControlName="txtName" placeholder="Country Name">
+    <span *ngIf="countryForm.controls['txtName'].touched && countryForm.hasError('required','txtName')">Please fill out the Country Name</span>
+</div>
+
+<div class="mb-3">
+    <input type="button" value="Save" *ngIf="IsEdit==false" class="btn btn-primary" (click)="Save()">
+    <input type="button" value="Update" *ngIf="IsEdit==true" class="btn btn-primary" (click)="Update()">
+</div>
+
+</form>

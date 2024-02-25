@@ -1,0 +1,39 @@
+<div class="row mb-3 mt-3">
+  <div class="col-auto">
+    <label>Name</label>
+  </div>
+  <div class="col-auto">
+    <input type="text" class="form-control" #txtName placeholder="patient name" />
+  </div>
+  <div class="col-auto">
+    <input type="button" class="btn btn-primary" value="Search" (click)="onSearch()" />
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12">
+    <table class="table table-hover table-striped table-bordered">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Phone</th>
+          <th>Country</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of Patients">
+          <td>{{ item.firstName }} {{ item.lastName }}</td>
+          <td>{{ item.phone }}</td>
+          <td>
+            {{ item.country.name }}
+          </td>
+          <td>
+            <input type="button" value="Delete" (click)="delete(item.id)" class="btn btn-danger" />
+            <input type="button" value="Edit" class="btn btn-primary" (click)="edit(item.id)" />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
